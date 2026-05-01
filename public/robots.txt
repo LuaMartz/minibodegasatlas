@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minibodegasatlas.lovable.app/sitemap.xml
