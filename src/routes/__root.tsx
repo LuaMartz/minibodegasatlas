@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Mini Bodegas Atlas" },
+      { name: "description", content: "Alquila Mini bodegas seguras y económicas en el Norte de Bogotá." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Mini Bodegas Atlas" },
+      { property: "og:description", content: "Alquila Mini bodegas seguras y económicas en el Norte de Bogotá." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Mini Bodegas Atlas" },
+      { name: "twitter:description", content: "Alquila Mini bodegas seguras y económicas en el Norte de Bogotá." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/8b4c9551-452a-4ff3-b03e-c18973f968ee" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/8b4c9551-452a-4ff3-b03e-c18973f968ee" },
     ],
     links: [
       {
