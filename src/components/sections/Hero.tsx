@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
-import logo from "../../assets/Logo.png";
-import heroImage from "../../assets/Bodega3.png";
+import logo from "@/assets/Logo.png";
+import heroImage from "@/assets/Bodega3.png";
 
 export function Hero() {
   return (

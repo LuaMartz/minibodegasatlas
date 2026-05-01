@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
-import image1 from "../../assets/bodega 1.png";
-import image2 from "../../assets/Fachada.png";
-import image3 from "../../assets/bodega 2.png";
+import image1 from "@/assets/bodega 1.png";
+import image2 from "@/assets/Fachada.png";
+import image3 from "@/assets/bodega 2.png";
 
 const sizes = [
   {
