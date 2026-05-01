@@ -135,5 +135,29 @@
 
   html {
     font-size: var(--font-size);
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
+
+  img {
+    text-wrap: balance;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-fade-in-up { animation: none; }
 }
