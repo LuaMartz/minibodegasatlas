@@ -13,12 +13,13 @@ export function Location() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Map */}
-          <div className="rounded-2xl overflow-hidden shadow-lg h-[500px]">
-            <iframe 
-              src="https://maps.app.goo.gl/s4zgRfWB6ecJzspG7"
-              title="Atlas Mini Bodegas"
+          <div className="rounded-2xl overflow-hidden shadow-lg h-[400px] md:h-[500px]">
+            <iframe
+              src="https://www.google.com/maps?q=Calle+161a+%2317-75,+Bogot%C3%A1,+Colombia&output=embed"
+              title="Ubicación Atlas Mini Bodegas en Bogotá"
               width="100%"
               height="100%"
+              loading="lazy"
               className="border-0"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
@@ -71,13 +72,13 @@ export function Location() {
             </div>
 
             <a
-              href="https://wa.me/573144212784?text=Hola!%20Quisiera%20información%20sobre%20cómo%20llegar%20a%20Atlas%20Mini%20Bodegas"
+              href="https://wa.me/573144212784?text=Hola!%20Quisiera%20cotizar%20una%20mini%20bodega%20y%20saber%20cómo%20llegar"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 flex items-center justify-center gap-2 bg-white border-2 border-blue-600 text-blue-600 py-3 px-6 rounded-lg hover:bg-blue-50 transition"
+              className="mt-6 flex items-center justify-center gap-2 bg-green-600 text-white py-4 px-6 rounded-lg hover:bg-green-700 transition shadow-lg font-semibold"
             >
               <Navigation size={20} />
-              Solicitar Ubicación Exacta
+              Cotizar y Agendar Visita por WhatsApp
             </a>
           </div>
         </div>

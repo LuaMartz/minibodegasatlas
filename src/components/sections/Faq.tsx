@@ -19,8 +19,8 @@ const faqs = [
     a: "Vigilancia permanente 24/7, circuito cerrado de cámaras CCTV y acceso controlado a todas las áreas comunes.",
   },
   {
-    q: "¿Ofrecen servicio de mudanza y embalaje?",
-    a: "Sí, contamos con servicio completo de mudanzas y embalaje profesional con materiales adecuados para proteger tus pertenencias.",
+    q: "¿Puedo acceder a mi bodega cuando quiera?",
+    a: "El acceso se coordina con cita previa dentro de nuestros horarios de atención para garantizar la seguridad de todos los clientes.",
   },
   {
     q: "¿Cuáles son los horarios de atención?",

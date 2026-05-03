@@ -1,4 +1,4 @@
-import { Shield, Clock, Video, Car, Package, Truck } from "lucide-react";
+import { Shield, Clock, Video, KeyRound, Package, MapPin } from "lucide-react";
 
 const features = [
   {
@@ -13,13 +13,13 @@ const features = [
   },
   {
     icon: Video,
-    title: "Cámaras y Control",
-    description: "Circuito cerrado de TV en todas las áreas comunes y sistema de acceso controlado."
+    title: "Cámaras CCTV",
+    description: "Circuito cerrado de TV en todas las áreas comunes monitoreado de forma permanente."
   },
   {
-    icon: Truck,
-    title: "Servicio de Mudanzas",
-    description: "Ofrecemos servicio completo de mudanzas para facilitar el traslado de tus pertenencias."
+    icon: KeyRound,
+    title: "Acceso Controlado",
+    description: "Sistema de acceso controlado para que solo personas autorizadas ingresen a las instalaciones."
   },
   {
     icon: Clock,
@@ -27,9 +27,9 @@ const features = [
     description: "Dispón de tu espacio de inmediato. Sin esperas ni trámites complicados."
   },
   {
-    icon: Car,
-    title: "Embalaje Profesional",
-    description: "Preparación y protección de objetos mediante materiales adecuados para almacenamiento o traslado."
+    icon: MapPin,
+    title: "Ubicación Estratégica",
+    description: "En el norte de Bogotá, con fácil acceso desde la Autopista Norte y vías principales."
   }
 ];
 

@@ -37,10 +37,10 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Servicios</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>📦 Mini Bodegas</li>
-              <li>🚚 Servicio de Mudanzas</li>
+              <li>📦 Mini Bodegas desde 3m³</li>
               <li>🔐 Almacenamiento Seguro</li>
               <li>👁️ Vigilancia 24/7</li>
+              <li>🎥 Cámaras CCTV</li>
             </ul>
           </div>
 
