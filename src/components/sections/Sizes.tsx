@@ -87,6 +87,8 @@ export function Sizes() {
             <img
               src={image1}
               alt="Pasillos de Atlas Mini Bodegas"
+              loading="lazy"
+              decoding="async"
               className="w-full h-[300px] object-cover"
             />
           </div>
@@ -94,13 +96,17 @@ export function Sizes() {
             <img
               src={image2}
               alt="Interior de bodegas Atlas"
+              loading="lazy"
+              decoding="async"
               className="w-full h-[300px] object-cover"
             />
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <img
               src={image3}
-              alt="Servicio de mudanzas Atlas"
+              alt="Bodegas Atlas - almacenamiento seguro"
+              loading="lazy"
+              decoding="async"
               className="w-full h-[300px] object-cover"
             />
           </div>

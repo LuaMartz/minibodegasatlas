@@ -5,8 +5,8 @@ import heroImage from "@/assets/Bodega3.png";
 
 const navLinks = [
   { href: "#features", label: "Características" },
-  { href: "#sizes", label: "Tamaños" },
   { href: "#location", label: "Ubicación" },
+  { href: "#sizes", label: "Tamaños" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contacto" },
 ];
@@ -23,6 +23,10 @@ export function Hero() {
           alt="Pasillo interior de Atlas Mini Bodegas en el norte de Bogotá"
           className="w-full h-full object-cover"
           fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          width={1920}
+          height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
       </div>
