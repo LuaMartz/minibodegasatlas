@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 import image1 from "@/assets/bodega 1.png";
 import image2 from "@/assets/Fachada.png";
 import image3 from "@/assets/bodega 2.png";
@@ -66,6 +67,24 @@ const sizes = [
       "Almacenamiento empresarial grande",
       "Inventario de distribución",
       "Soluciones comerciales completas"
+    ]
+  },
+  {
+    size: "27m³",
+    ideal: "Casa grande, oficinas o inventario amplio",
+    features: [
+      "Mudanzas de casa grande",
+      "Inventarios de e-commerce",
+      "Equipamiento de oficina completo"
+    ]
+  },
+  {
+    size: "33m³",
+    ideal: "Bodegaje empresarial XL o varias mudanzas",
+    features: [
+      "Almacenamiento corporativo",
+      "Stock e inventario de gran volumen",
+      "Máxima capacidad disponible"
     ]
   }
 ];
