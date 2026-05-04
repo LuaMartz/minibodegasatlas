@@ -1,33 +1,35 @@
 import { MapPin, Navigation } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 
 export function Location() {
   return (
     <section id="location" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Ubicación Privilegiada</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Ubicados en el norte de Bogotá, con fácil acceso desde las principales vías
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Map */}
-          <div className="rounded-2xl overflow-hidden shadow-lg h-[400px] md:h-[500px]">
+          <Reveal variant="left" className="rounded-2xl overflow-hidden shadow-lg h-[400px] md:h-[500px] hover-lift">
             <iframe
               src="https://www.google.com/maps?q=Calle+161a+%2317-75,+Bogot%C3%A1,+Colombia&output=embed"
               title="Ubicación Atlas Mini Bodegas en Bogotá"
               width="100%"
               height="100%"
               loading="lazy"
-              className="border-0"
+              className="border-0 w-full h-full"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
+          </Reveal>
 
           {/* Location Details */}
-          <div>
+          <Reveal variant="right">
+            <div>
             <div className="bg-white p-8 rounded-xl shadow-sm mb-6">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
