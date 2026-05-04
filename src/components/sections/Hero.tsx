@@ -114,7 +114,7 @@ export function Hero() {
             Mini Bodegas Seguras en el Norte de Bogotá
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
-            Alquila tu espacio desde 3 m³ hasta 22 m³. Vigilancia 24/7, cámaras CCTV y acceso controlado. Sin cláusulas de permanencia.
+            Alquila tu espacio desde 3 m³ hasta 33 m³. Vigilancia 24/7, cámaras CCTV y acceso controlado. Sin cláusulas de permanencia.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a

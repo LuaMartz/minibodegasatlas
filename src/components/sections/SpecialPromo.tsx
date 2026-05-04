@@ -39,20 +39,24 @@ export function SpecialPromo() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* First Promo Image */}
-          <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+          <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300 bg-white">
             <img
               src={promoImage1}
               alt="Reserva tu mini bodega - Atlas Mini Bodegas"
-              className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto block object-contain"
             />
           </div>
 
           {/* Second Promo Image */}
-          <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+          <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300 bg-white">
             <img
               src={promoImage2}
               alt="Alquila tu mini bodega sin cláusulas - Atlas Mini Bodegas"
-              className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto block object-contain"
             />
           </div>
         </div>
