@@ -74,6 +74,7 @@ export function Features() {
             </p>
           </div>
         </Reveal>
+      </div>
     </section>
   );
 }

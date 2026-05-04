@@ -29,7 +29,6 @@ export function Location() {
 
           {/* Location Details */}
           <Reveal variant="right">
-            <div>
             <div className="bg-white p-8 rounded-xl shadow-sm mb-6">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -82,7 +81,7 @@ export function Location() {
               <Navigation size={20} />
               Cotizar y Agendar Visita por WhatsApp
             </a>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
