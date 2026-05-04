@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     q: "¿Qué tamaños de mini bodega ofrecen?",
-    a: "Ofrecemos espacios desde 3 m³ hasta 22 m³ (3, 6, 7, 11, 12, 13 y 22 metros cúbicos), ideales desde archivos hasta el contenido de una casa completa.",
+    a: "Ofrecemos espacios desde 3 m³ hasta 33 m³ (3, 6, 7, 11, 12, 13, 22, 27 y 33 metros cúbicos), ideales desde archivos hasta inventarios empresariales.",
   },
   {
     q: "¿Hay cláusula de permanencia?",
