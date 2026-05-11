@@ -1,5 +1,5 @@
-import promoImage1 from "@/assets/Reserva mini bodega.png";
-import promoImage2 from "@/assets/alqquila mini bodega.png";
+import promoImage1 from "@/assets/reserva-mini-bodega.png";
+import promoImage2 from "@/assets/alquila-mini-bodega.png";
 
 export function SpecialPromo() {
   return (
