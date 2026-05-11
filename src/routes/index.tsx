@@ -164,10 +164,10 @@ function Index() {
       <Hero />
       <SpecialPromo />
       <Features />
-      <Location />
       <Sizes />
-      <Faq />
+      <Location />
       <Contact />
+      <Faq />
       <Footer />
       <a
         href="https://wa.me/573144212784?text=Hola!%20Quiero%20cotizar%20una%20mini%20bodega"

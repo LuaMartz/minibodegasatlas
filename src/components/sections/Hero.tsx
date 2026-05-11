@@ -1,12 +1,22 @@
 import { useState } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import {
+  Phone,
+  Menu,
+  X,
+  ShieldCheck,
+  Clock3,
+  Warehouse,
+  MapPin,
+  ArrowRight,
+} from "lucide-react";
+
 import logo from "@/assets/Logo.png";
 import heroImage from "@/assets/Bodega3.png";
 
 const navLinks = [
   { href: "#features", label: "Características" },
-  { href: "#location", label: "Ubicación" },
   { href: "#sizes", label: "Tamaños" },
+  { href: "#location", label: "Ubicación" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contacto" },
 ];
@@ -15,143 +25,235 @@ export function Hero() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative h-screen">
-      {/* Background Image */}
+    <header id="top" className="relative min-h-screen overflow-hidden">
+
+      {/* ================= BACKGROUND ================= */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Pasillo interior de Atlas Mini Bodegas en el norte de Bogotá"
-          className="w-full h-full object-cover"
+          alt="Atlas Mini Bodegas Bogotá"
+          className="w-full h-full object-cover scale-105"
           fetchPriority="high"
-          loading="eager"
-          decoding="async"
-          width={1920}
-          height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+
+        {/* Overlay más premium (menos agresivo) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+
+        {/* Glow más suave y elegante */}
+        <div className="absolute top-[-120px] right-[-120px] w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full" />
       </div>
 
-      {/* Navigation - Fixed */}
-      <nav
-        className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md"
-        aria-label="Navegación principal"
-      >
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <a href="#top" className="flex items-center" aria-label="Atlas Mini Bodegas — Inicio">
-            <img src={logo} alt="Logo Atlas Mini Bodegas" className="h-14 md:h-20" />
-          </a>
-          <div className="hidden md:flex gap-6 text-gray-800">
-            {navLinks.map((l) => (
+      {/* ================= NAVBAR (PREMIUM BLANCO) ================= */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100 shadow-sm">
+        <div className="container mx-auto px-4">
+
+          <div className="flex items-center justify-between py-4">
+
+            {/* Logo */}
+            <a href="#top" className="flex items-center">
+              <img
+                src={logo}
+                alt="Atlas Mini Bodegas"
+                className="h-12 md:h-14 object-contain"
+              />
+            </a>
+
+            {/* Desktop Nav */}
+            <div className="hidden lg:flex items-center gap-8">
+              {navLinks.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-600 transition text-sm font-medium"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+
+            {/* Actions */}
+            <div className="hidden md:flex items-center gap-3">
+
               <a
-                key={l.href}
-                href={l.href}
-                className="relative font-medium hover:text-blue-600 transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full"
+                href="tel:+573144212784"
+                className="flex items-center gap-2 text-gray-700 border border-gray-200 hover:border-gray-300 px-4 py-2 rounded-xl bg-white transition"
               >
-                {l.label}
+                <Phone size={16} />
+                <span className="text-sm font-medium">
+                  +57 314 421 2784
+                </span>
               </a>
-            ))}
-          </div>
-          <div className="flex gap-2 md:gap-3 items-center">
-            <a
-              href="tel:+573144212784"
-              aria-label="Llamar al +57 314 421 2784"
-              className="hidden sm:flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition shadow-sm hover:shadow-md"
-            >
-              <Phone size={18} />
-              <span className="hidden lg:inline">+57 314 421 2784</span>
-            </a>
-            <a
-              href="https://wa.me/573144212784"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Escribir por WhatsApp"
-              className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition shadow-sm hover:shadow-md"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-              </svg>
-              <span className="hidden sm:inline">WhatsApp</span>
-            </a>
+
+              <a
+                href="https://wa.me/573144212784?text=Hola,%20quiero%20información%20sobre%20las%20mini%20bodegas"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl transition shadow-lg font-semibold"
+              >
+                WhatsApp
+              </a>
+
+            </div>
+
+            {/* Mobile button */}
             <button
-              type="button"
-              onClick={() => setOpen((o) => !o)}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-800"
-              aria-label={open ? "Cerrar menú" : "Abrir menú"}
-              aria-expanded={open}
+              onClick={() => setOpen(!open)}
+              className="lg:hidden text-gray-800 p-2"
+              aria-label="Abrir menú"
             >
-              {open ? <X size={24} /> : <Menu size={24} />}
+              {open ? <X size={28} /> : <Menu size={28} />}
             </button>
+
           </div>
-        </div>
-        {/* Mobile menu */}
-        <div
-          className={`md:hidden overflow-hidden bg-white border-t border-gray-100 transition-[max-height] duration-300 ${
-            open ? "max-h-96" : "max-h-0"
-          }`}
-        >
-          <div className="container mx-auto px-4 py-3 flex flex-col gap-1">
-            {navLinks.map((l) => (
+
+          {/* Mobile Menu */}
+          <div className={`lg:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-96 pb-6" : "max-h-0"}`}>
+            <div className="flex flex-col gap-2 pt-4">
+
+              {navLinks.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="text-gray-700 hover:text-blue-600 py-3 border-b border-gray-100"
+                >
+                  {item.label}
+                </a>
+              ))}
+
               <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 font-medium transition"
+                href="https://wa.me/573144212784"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 bg-green-600 text-white text-center py-3 rounded-xl font-semibold"
               >
-                {l.label}
+                Cotizar por WhatsApp
               </a>
-            ))}
+
+            </div>
           </div>
+
         </div>
       </nav>
 
-      {/* Hero Content */}
-      <div id="top" className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center pt-20">
-        <div className="max-w-3xl animate-fade-in-up">
-          <span className="inline-block bg-blue-600/90 backdrop-blur text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-5 shadow-lg">
-            📍 Norte de Bogotá · Toberín
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-            Mini Bodegas Seguras en el Norte de Bogotá
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
-            Alquila tu espacio desde 3 m³ hasta 33 m³. Vigilancia 24/7, cámaras CCTV y acceso controlado. Sin cláusulas de permanencia.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://wa.me/573144212784?text=Hola!%20Quiero%20cotizar%20una%20mini%20bodega"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 hover:scale-105 transition text-center flex items-center justify-center gap-2 shadow-xl font-semibold"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-              </svg>
-              Cotiza por WhatsApp
-            </a>
-            <a
-              href="#sizes"
-              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white/20 transition border border-white/30 text-center font-semibold"
-            >
-              Ver Tamaños Disponibles
-            </a>
+      {/* ================= HERO CONTENT ================= */}
+      <div className="relative z-10 container mx-auto px-4 pt-32 pb-20 min-h-screen flex items-center">
+
+        <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
+
+          {/* LEFT */}
+          <div className="max-w-3xl">
+
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full mb-6">
+              <MapPin size={16} />
+              <span className="text-sm font-medium">
+                Norte de Bogotá · Toberín
+              </span>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-5xl sm:text-6xl xl:text-7xl font-black text-white leading-[0.95] mb-6">
+              Espacios
+              <span className="block text-orange-400">
+                Seguros
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
+              Mini bodegas con acceso controlado y contratos flexibles.
+            </p>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+
+              <a
+                href="https://wa.me/573144212784?text=Hola,%20quiero%20cotizar%20una%20mini%20bodega"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition flex items-center justify-center gap-3 shadow-xl"
+              >
+                Cotizar ahora
+                <ArrowRight className="group-hover:translate-x-1 transition" size={20} />
+              </a>
+
+              <a
+                href="#sizes"
+                className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-2xl font-semibold backdrop-blur text-center"
+              >
+                Ver tamaños
+              </a>
+
+            </div>
+
+            {/* FEATURES */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+              {[
+                { icon: ShieldCheck, text: "Seguridad 24/7 h" },
+                { icon: Clock3, text: "Entrega inmediata" },
+                { icon: Warehouse, text: "Desde 3 m³ hasta 33 m³" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white/10 border border-white/10 backdrop-blur-md rounded-2xl p-4"
+                >
+                  <item.icon className="text-blue-400 mb-3" size={28} />
+                  <p className="text-white font-semibold text-sm">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
+
+            </div>
+
           </div>
 
-          {/* Trust bar */}
-          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-white/90 text-sm">
-            <span className="flex items-center gap-2">✅ Vigilancia 24/7</span>
-            <span className="flex items-center gap-2">✅ Cámaras CCTV</span>
-            <span className="flex items-center gap-2">✅ Sin permanencia</span>
-            <span className="flex items-center gap-2">✅ Entrega inmediata</span>
+          {/* RIGHT CARD */}
+          <div className="hidden lg:flex justify-end">
+
+            <div className="w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 shadow-2xl">
+
+              <h3 className="text-3xl font-bold text-white mb-6">
+                Almacenamiento flexible
+              </h3>
+
+              <div className="space-y-4 mb-8">
+                {[
+                  "Sin cláusulas de permanencia",
+                  "Espacios para empresas y hogar",
+                  "Atención personalizada",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 text-white/90">
+                    <div className="w-2.5 h-2.5 bg-green-400 rounded-full" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="#contact"
+                className="block text-center bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold transition"
+              >
+                Solicitar información
+              </a>
+
+            </div>
+
           </div>
+
+        </div>
+
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+        <div className="w-7 h-12 border-2 border-white/30 rounded-full flex justify-center p-2">
+          <div className="w-1.5 h-3 bg-white rounded-full animate-bounce" />
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10" aria-hidden="true">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
-          <div className="w-1 h-3 bg-white/50 rounded-full animate-bounce"></div>
-        </div>
-      </div>
     </header>
   );
 }

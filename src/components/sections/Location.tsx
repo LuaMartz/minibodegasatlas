@@ -14,17 +14,33 @@ export function Location() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Map */}
-          <Reveal variant="left" className="rounded-2xl overflow-hidden shadow-lg h-[400px] md:h-[500px] hover-lift">
+          <Reveal
+            variant="left"
+            className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] md:h-[500px] hover-lift border border-gray-200"
+          >
             <iframe
-              src="https://www.google.com/maps?q=Calle+161a+%2317-75,+Bogot%C3%A1,+Colombia&output=embed"
-              title="Ubicación Atlas Mini Bodegas en Bogotá"
+              src="https://www.google.com/maps?q=Atlas%20Mini%20Bodegas%20Bogotá&output=embed"
+              title="Atlas Mini Bodegas - Bogotá"
               width="100%"
               height="100%"
               loading="lazy"
               className="border-0 w-full h-full"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            />
+
+            {/* Overlay Button */}
+            <div className="absolute bottom-5 left-5 right-5">
+              <a
+                href="https://maps.google.com/?q=Atlas+Mini+Bodegas+Bogotá"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-white/95 backdrop-blur-md text-gray-900 font-semibold py-4 px-6 rounded-xl shadow-xl hover:scale-[1.02] transition-all duration-300"
+              >
+                <MapPin className="text-blue-600" size={20} />
+                Ver ubicación en Google Maps
+              </a>
+            </div>
           </Reveal>
 
           {/* Location Details */}
