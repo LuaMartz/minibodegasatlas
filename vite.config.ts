@@ -8,9 +8,14 @@ export default defineConfig({
     tanstackStart(),
     react(),
   ],
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+
+  server: {
+    port: 3000,
   },
 });
