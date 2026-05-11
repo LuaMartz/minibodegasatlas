@@ -24,16 +24,6 @@ const sizes = [
     ]
   },
   {
-    size: "7m³",
-    ideal: "Contenido de habitación, inventario mediano",
-    features: [
-      "Muebles de una habitación",
-      "Inventario comercial",
-      "Electrodomésticos pequeños"
-    ],
-    featured: true
-  },
-  {
     size: "11m³",
     ideal: "Contenido de apartamento pequeño o inventario",
     features: [
